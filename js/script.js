@@ -10,17 +10,9 @@ function makeDefaultCells(){
       grid.appendChild(cell);  
     }
   }
-
-  //add background color effect to the cells 
-  let cells = document.querySelectorAll('.cell');
-  
-  cells.forEach(cell => {
-    cell.addEventListener('mouseover', () => {
-      cell.style.backgroundColor = 'mediumpurple';
-    });
-  });
+  //adds hover effect after cells been created
+  addHoverEffect();
 }
-
 
 function makeNewCells(gridSize){
   //remove old cells to replace new cells
@@ -32,18 +24,20 @@ function makeNewCells(gridSize){
     for(let j = 1; j <= gridSize; j++){
       const cell = document.createElement('div');
       cell.classList.add('cell');
-      cell.style.width = (100/ gridSize) + "%";
+      cell.style.width = ((100 / gridSize) + "%");
       grid.appendChild(cell);
     }
   }
+   //adds hover effect after cells been created
+   addHoverEffect();
+}
 
-  //add background color effect to the cells 
-  //change these two in seperate function with the one in the other function
+function addHoverEffect(){
   let cells = document.querySelectorAll('.cell');
   
   cells.forEach(cell => {
     cell.addEventListener('mouseover', () => {
-      cell.style.backgroundColor = 'mediumpurple';
+      cell.style.backgroundColor = 'darkgrey';
     });
   });
 }
@@ -52,8 +46,10 @@ function etchASketch(){
   makeDefaultCells();
 
   button.addEventListener('click', () => {
-    let gridSize = parseInt(prompt("Enter choice of grid", 16));
-    makeNewCells(gridSize);
+    let gridSize = parseInt(prompt("Enter choice of grid(1-100)", 16));
+    if(gridSize <= 100 && gridSize >= 1){
+      makeNewCells(gridSize);
+    }
   });
 }
 

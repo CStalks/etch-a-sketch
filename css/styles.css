@@ -38,5 +38,6 @@ body {
     background-color: grey;
     font-weight: bold;
     cursor: pointer;
-    border: 2px solid rgb(170, 127, 127);
+    border: 2px solid rgb(9, 9, 9);
+    border-radius: 5px;
 }
