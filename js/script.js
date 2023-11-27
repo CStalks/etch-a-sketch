@@ -37,7 +37,10 @@ function addHoverEffect(){
   
   cells.forEach(cell => {
     cell.addEventListener('mouseover', () => {
-      cell.style.backgroundColor = 'darkgrey';
+      let r = Math.floor((Math.random() * 255) + 1);
+      let g = Math.floor((Math.random() * 255) + 1);
+      let b = Math.floor((Math.random() * 255) + 1);
+      cell.style.backgroundColor = `rgb(${r},${g},${b})`;
     });
   });
 }
