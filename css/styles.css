@@ -26,7 +26,7 @@ body {
 
 .cell {
     border: solid rgb(0, 0, 0);
-    background-color: rgb(96, 134, 119);
+    background-color: rgb(255, 255, 255);
     width: calc(100% / 16);
     box-sizing: border-box;
     flex-grow: 1;
@@ -35,7 +35,7 @@ body {
 .button-size {
     width: 120px;
     height: 50px;
-    background-color: grey;
+    background-color: rgb(133, 150, 142);
     font-weight: bold;
     cursor: pointer;
     border: 2px solid rgb(9, 9, 9);
