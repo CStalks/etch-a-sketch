@@ -41,6 +41,7 @@ function addHoverEffect(){
       let g = Math.floor((Math.random() * 255) + 1);
       let b = Math.floor((Math.random() * 255) + 1);
       cell.style.backgroundColor = `rgb(${r},${g},${b})`;
+      cell.style.filter += `brightness(${10}})`;
     });
   });
 }
@@ -57,6 +58,3 @@ function etchASketch(){
 }
 
 etchASketch();
-  
-
-

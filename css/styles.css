@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Wellfleet&display=swap');
+
 body {
     display: flex;
     justify-content: center;
@@ -8,7 +10,8 @@ body {
     padding: 0;
     background-color: white;
     gap: 90px;
-    background-color: rgb(84, 116, 118)
+    background-color: rgb(84, 116, 118);
+    font-family: 'Wellfleet', sans-serif, serif;
 }
 
 .title {
